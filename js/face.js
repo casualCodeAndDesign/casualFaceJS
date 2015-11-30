@@ -6,3 +6,5 @@ FB.api(
         }
     }
 );
+
+window.onload = FB.api;
