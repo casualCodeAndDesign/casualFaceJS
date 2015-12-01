@@ -2,9 +2,11 @@ FB.api(
     "/BrewDogHel",
     function (response) {
         if (response && !response.error) {
-            alert("Hello World");
+            GreatSuccess();
         }
     }
 );
 
-window.onload = FB.api;
+function GreatSuccess() {
+    alert("Hello World");
+}
