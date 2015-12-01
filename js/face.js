@@ -1,5 +1,5 @@
 FB.api(
-    "/zuck?fref=ts",
+    "/BrewDogHel",
     function (response) {
         if (response && !response.error) {
             alert("Hello World");
