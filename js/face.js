@@ -4,11 +4,7 @@ FB.api(
     {"fields":"posts.limit(10)"},
     function (response) {
         if (response && !response.error) {
-            GreatSuccess();
+            console.log("Success....")
         }
     }
 );
-
-function GreatSuccess() {
-    alert("Hello World");
-}

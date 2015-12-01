@@ -31,6 +31,7 @@
      js.src = "http://connect.facebook.net/fi_FI/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
+);
 </script>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -39,7 +40,7 @@
         <!-- Add your site or application content here -->
         <p>Hello world! This is HTML5 Boilerplate.</p>
         
-        <section id="facebook" onload="FB.api()">
+        <section id="facebook">
         </section>
         
         
@@ -47,5 +48,8 @@
 
 
         <script src="js/face.js"></script>
+        <script>
+            $(window).on('load', greatSuccess());
+        </script>
     </body>
 </html>
