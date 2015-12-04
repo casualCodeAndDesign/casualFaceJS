@@ -13,25 +13,25 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script type="text/javascript" src="https://connect.facebook.net/fi_FI/sdk.js"></script>
     </head>
     <body>
         <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1488048698169424',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
+  window.fbAsyncInit = function () {
+    FB.init({ appId: '1488048698169424', xfbml: true, version: 'v2.5' });
+    
+      if (typeof facebookInit == 'function') {
+          facebookInit();
+      }
   };
 
-  (function(d, s, id){
+  (function (d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "http://connect.facebook.net/fi_FI/sdk.js";
+     js.src = "//connect.facebook.net/fi_FI/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-);
 </script>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -48,8 +48,5 @@
 
 
         <script src="js/face.js"></script>
-        <script>
-            $(window).on('load', greatSuccess());
-        </script>
     </body>
 </html>
